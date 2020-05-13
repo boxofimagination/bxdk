@@ -80,7 +80,7 @@ func Connect(ctx context.Context, cfg DBConfig) (*DB, error) {
 	db := newFromSqlxDB(mastedb, followerdb)
 
 	if cfg.MaxIdleConnections > 0 {
-		db.SetMaxIdleConnes(cfg.MaxIdleConnections)
+		db.SetMaxIdleConns(cfg.MaxIdleConnections)
 	}
 	if cfg.MaxOpenConnections > 0 {
 		db.SetMaxOpenConns(cfg.MaxOpenConnections)
@@ -124,7 +124,7 @@ func (db *DB) GetFollower() *sqlx.DB  {
 }
 
 // SetMaxIddleConns to sql database
-func (db *DB) SetMaxIdleConnes(n int) {
+func (db *DB) SetMaxIdleConns(n int) {
 	db.master.SetMaxIdleConns(n)
 	db.follower.SetMaxIdleConns(n)
 }
