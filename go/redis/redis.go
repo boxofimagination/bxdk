@@ -18,7 +18,7 @@ var (
 )
 
 
-// Redis defines interface for TDK redis library
+// Redis defines interface for BXDK redis library
 type Redis = engine.Redis
 
 // Pipeliner alias of engine.Pipeliner, the caller don't have to import engine
@@ -30,7 +30,7 @@ type Client struct {
 	Redis
 }
 
-// New creates new redis tdk library from the given config.
+// New creates new redis bxdk library from the given config.
 // The default engine used is `redigo` based engine
 func New(cfg Config) (*Client, error ) {
 	err := defaults.SetDefault(&cfg)

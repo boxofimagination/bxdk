@@ -8,19 +8,19 @@ import (
 	"strings"
 )
 
-// TKPServiceEnv type
-type TKPServiceEnv string
+// BOXServiceEnv type
+type BOXServiceEnv string
 
 // Env list
 const (
-	DevelopmentEnv TKPServiceEnv = "development"
-	StagingEnv     TKPServiceEnv = "staging"
-	ProductionEnv  TKPServiceEnv = "production"
+	DevelopmentEnv BOXServiceEnv = "development"
+	StagingEnv     BOXServiceEnv = "staging"
+	ProductionEnv  BOXServiceEnv = "production"
 )
 
 // Env related var
 var (
-	envName   = "TKPENV"
+	envName   = "BOXENV"
 	goVersion string
 )
 
@@ -61,13 +61,13 @@ func SetFromEnvFile(filepath string) error {
 	return nil
 }
 
-// ServiceEnv return TKPENV service environment
-func ServiceEnv() TKPServiceEnv {
+// ServiceEnv return BOXENV service environment
+func ServiceEnv() BOXServiceEnv {
 	e := os.Getenv(envName)
 	if e == "" {
 		e = string(DevelopmentEnv)
 	}
-	return TKPServiceEnv(e)
+	return BOXServiceEnv(e)
 }
 
 // GoVersion to return current build go version

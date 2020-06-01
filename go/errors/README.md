@@ -1,4 +1,4 @@
-# TDK Error
+# BXDK Error
 
 ## Error
 
@@ -72,7 +72,7 @@ func SomeFunction() error {
 
 Tracing stack when spawning errors is not desireable. Calling the whole stack and parse the stack will surely come with performance degradation. In high traffic applications, this is not preferrable and is not a recommended practice.
 
-But to make development more easier stack trace will be enabled when `TKPENV=development`.
+But to make development more easier stack trace will be enabled when `BOXENV=development`.
 
 ### Real life example
 

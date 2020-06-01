@@ -63,10 +63,10 @@ type Config struct {
 	// Deprecated, this field will have no effect
 	Engine Engine
 	// UseColor, option to colorize log in console.
-	// Deprecated true if and only if TKPENV=development
+	// Deprecated true if and only if BOXENV=development
 	UseColor bool
 	// UseJSON, option to print in json format.
-	// Deprecated, true if and only if TKPENV!=development
+	// Deprecated, true if and only if BOXENV!=development
 	UseJSON bool
 }
 

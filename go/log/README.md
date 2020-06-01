@@ -1,6 +1,6 @@
-# TDK Log
+# BXDK Log
 
-TDK Log is based on [Zerolog](https://github.com/rs/zerolog)
+BXDK Log is based on [Zerolog](https://github.com/rs/zerolog)
 
 ## Log level
 
@@ -16,13 +16,13 @@ The log is disabled if `LogLevel` < `CurrentLogLevel`. For example, the `Debug` 
 
 ## Default Config
 
-Tdk log default config:
+BXdk log default config:
 - debug log level
 - RFC3339 time format
 - No caller
 - No output file
-- Colored console format if TKPENV=development
-- JSON format if TKPENV!=development
+- Colored console format if BOXENV=development
+- JSON format if BOXENV!=development
 
 ## Customizing log
 
@@ -136,7 +136,7 @@ Each level has 3 function:
 - formatted -> like Printf in standard log
 - with map[string]interface{} (or log.KV)
 
-We also add several functions to ease the migration to tdk log.
+We also add several functions to ease the migration to bxdk log.
 Function list and example:
 
 ```go
@@ -203,9 +203,9 @@ Output example:
 2019-03-08 17:16:48+07:00 FTL log_test.go:57 > message arg1=hello arg2=world
 ```
 
-## Integration with TDK Error package
+## Integration with BXDK Error package
 
-TDK error package has a features called `errors.Fields`. This fields can be used to add more context into the error, and then we can print the fields when needed. TDK log will automatically print the fields if `error = tdkerrors.Error` by using `log.Errors`. For example:
+BXDK error package has a features called `errors.Fields`. This fields can be used to add more context into the error, and then we can print the fields when needed. BXDK log will automatically print the fields if `error = bxdkerrors.Error` by using `log.Errors`. For example:
 
 ```go
 import "github.com/boxofimagination/bxdk/go/log"
