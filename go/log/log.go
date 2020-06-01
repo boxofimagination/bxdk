@@ -105,7 +105,7 @@ func ErrorWithFields(msg string, fields KV) {
 	errorLogger.ErrorWithFields(msg, fields)
 }
 
-// Errors can handle error from tdk/x/go/errors package
+// Errors can handle error from bxdk/x/go/errors package
 func Errors(err error) {
 	errorLogger.Errors(err)
 }

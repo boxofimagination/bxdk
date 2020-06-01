@@ -31,7 +31,7 @@ To create a meaningful error from this package, we need to use `errors.E(args...
 import "github.com/boxofimagination/bxdk/errors"
 
 func main() {
-    err := errors.E("this is error from tdk")
+    err := errors.E("this is error from bxdk")
     // do something with the error
 }
 
@@ -45,7 +45,7 @@ Error with fields is useful to give context to error. For example `userid` of us
 import "github.com/boxofimagination/bxdk/errors"
 
 func main() {
-    err := errors.E("this is error from tdk", errors.Fields{"user_id": 1234})
+    err := errors.E("this is error from bxdk", errors.Fields{"user_id": 1234})
     // do something with the error
 }
 ```
@@ -64,7 +64,7 @@ func main() {
 
 func SomeFunction() error {
     const op errors.Op = "main/somefunction"
-    return errors.E(op, "this is error from tdk")
+    return errors.E(op, "this is error from bxdk")
 }
 ```
 

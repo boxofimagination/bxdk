@@ -81,7 +81,7 @@ func testLineNumber(t *testing.T, engine logger.Engine) {
 	textStr := string(text)
 
 	// check caller, should contain this test file path
-	caller := strings.Count(textStr, "tdk/go/log/log_test.go")
+	caller := strings.Count(textStr, "bxdk/go/log/log_test.go")
 	expected := 19 // there are 19 functions
 
 	// TODO: currently logrus caller always point to logrus.go file
